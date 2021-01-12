@@ -1,0 +1,12 @@
+.selected {
+    border: 1px solid black;
+}
+
+.standard {
+
+}
+
+.color {
+    height: 50px;
+    width: 50px;
+}
