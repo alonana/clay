@@ -5,6 +5,7 @@ import styles from './component.module.css'
 import {StepSize} from '../step_size/component'
 import {StepColor} from '../step_color/component'
 import {MoveStep} from '../move_step/component'
+import {StepShape} from '../step_shape/component'
 
 export function Steps() {
   const state = useSelector(selectState)
@@ -17,16 +18,19 @@ export function Steps() {
     case 1:
       step = (<StepColor/>)
       break
+    case 2:
+      step = (<StepShape/>)
+      break
     default:
       console.log('not ready step')
   }
   return (
     <div>
       <div className={styles.row}>
-
-        <MoveStep offset={1}/>
-        <MoveStep offset={-1}/>
-
+        <div>
+          <MoveStep offset={1}/>
+          <MoveStep offset={-1}/>
+        </div>
         {step}
       </div>
     </div>

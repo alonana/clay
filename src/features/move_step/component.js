@@ -20,9 +20,16 @@ export function MoveStep(props) {
   const newStep = stepId + offset
   const enabled = newStep >= 0 && newStep <= maxStep
 
+  let additionalStyle
+  if (enabled) {
+    additionalStyle = styles.buttonEnabled
+  } else {
+    additionalStyle = styles.buttonDisabled
+  }
+
   return (
     <button
-      className={styles.button}
+      className={`${styles.button} ${additionalStyle}`}
       aria-label="Increment value"
       onClick={() => {
         if (enabled) {

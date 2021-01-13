@@ -1,15 +1,15 @@
 import React from 'react'
-import {ColorOption} from '../color_option/component'
+import {ColorRow} from '../color_row/component'
+import {TitleStep} from '../title_step/component'
 
 export function StepColor() {
   return (
     <div>
-      <div>
-        בוחרים צבע
-      </div>
-      <ColorOption color={'green'}/>
-      <ColorOption color={'brown'}/>
-      <ColorOption color={'blue'}/>
+      <TitleStep
+        label={'בוחרים צבע'}
+      />
+      <ColorRow colors={['green', 'lightgreen']}/>
+      <ColorRow colors={['brown', 'lightblue']}/>
     </div>
   )
 }

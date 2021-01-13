@@ -10,13 +10,26 @@ export function SizeOption(props) {
 
   const selected = size === state.size
   const style = selected ? styles.selected : styles.standard
+
+  const radius = `${size * 20}px`
+
   return (
-    <div>
+    <div
+      className={styles.root}
+      onClick={() => dispatch(setSize(size))}
+    >
       <div
-        className={style}
-        onClick={() => dispatch(setSize(size))}
+        className={styles.content}
       >
-        קוטר {size} ס"מ
+        <div
+          className={styles.dot}
+          style={{height: radius, width: radius}}
+        />
+        <div
+          className={style}
+        >
+          קוטר {size} ס"מ
+        </div>
       </div>
     </div>
   )

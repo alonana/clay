@@ -3,10 +3,11 @@ import {createSlice} from '@reduxjs/toolkit'
 export const reducer = createSlice({
   name: 'master',
   initialState: {
-    maxStep: 1,
+    maxStep: 2,
     stepId: 0,
     size: 11,
-    color: "green",
+    color: 'green',
+    shape: 'leaf',
   },
   reducers: {
     setStep: (state, action) => {
@@ -18,6 +19,9 @@ export const reducer = createSlice({
     setColor: (state, action) => {
       state.color = action.payload
     },
+    setShape: (state, action) => {
+      state.shape = action.payload
+    },
   },
 })
 
@@ -25,6 +29,7 @@ export const {
   setStep,
   setSize,
   setColor,
+  setShape,
 } = reducer.actions
 
 export const selectState = state => state.master

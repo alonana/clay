@@ -6,9 +6,7 @@
 
 }
 
-.color {
-    border-radius: 50%;
-    display: inline-block;
+.shape {
     height: 100px;
     width: 100px;
     margin: 20px;

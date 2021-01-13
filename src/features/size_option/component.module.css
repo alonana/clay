@@ -5,3 +5,20 @@
 .standard{
 
 }
+
+.dot {
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.root{
+    padding: 30px;
+    display: flex;
+    height: 250px;
+}
+
+.content{
+    display: inline-block;
+    align-self: flex-end;
+}
