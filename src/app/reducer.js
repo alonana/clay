@@ -6,7 +6,7 @@ export const reducer = createSlice({
     maxStep: 2,
     stepId: 0,
     size: 11,
-    color: 'green',
+    color: '#f4e9e9',
     shape: 'leaf',
   },
   reducers: {

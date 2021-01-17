@@ -8,7 +8,7 @@ export function ShapeOption(props) {
   const state = useSelector(selectState)
   const dispatch = useDispatch()
   const shape = props.shape
-
+  const color = state.color
   const selected = shape === state.shape
   const style = selected ? styles.selected : styles.standard
 
@@ -20,6 +20,9 @@ export function ShapeOption(props) {
       >
         <img
           className={styles.shape}
+          style={{
+            backgroundColor: color,
+          }}
           src={GetShape(shape)}
           alt=""
         />

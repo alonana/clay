@@ -1,5 +1,5 @@
 .selected {
-    background-color: red;
+    border: 1px solid black;
 }
 
 .standard{

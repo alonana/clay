@@ -7,11 +7,11 @@ import {Product} from './features/product/component'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
         <img src={logo} className="App-logo" alt="logo"/>
         <Steps/>
         <Product/>
-      </header>
+      </div>
     </div>
   )
 }

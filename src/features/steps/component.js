@@ -25,12 +25,12 @@ export function Steps() {
       console.log('not ready step')
   }
   return (
-    <div>
-      <div className={styles.row}>
-        <div>
-          <MoveStep offset={1}/>
-          <MoveStep offset={-1}/>
-        </div>
+    <div className={styles.root}>
+      <div className={styles.arrows}>
+        <MoveStep offset={1}/>
+        <MoveStep offset={-1}/>
+      </div>
+      <div className={styles.step}>
         {step}
       </div>
     </div>
