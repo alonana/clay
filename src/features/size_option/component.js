@@ -8,7 +8,7 @@ export function SizeOption(props) {
   const dispatch = useDispatch()
   const size = props.size
 
-  const selected = size === state.size
+  const selected = size === state.current.size
   const style = selected ? styles.selected : styles.standard
 
   const radius = `${size * 15}px`

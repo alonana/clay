@@ -7,6 +7,7 @@
 }
 
 .dot {
+    cursor: pointer;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;

@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.cartImage {
+    height: 60px;
+    width: 60px;
+}
+
+.title {
+    margin-top: 15px;
+    font-size: 25px;
+}

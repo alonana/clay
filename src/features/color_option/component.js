@@ -8,7 +8,7 @@ export function ColorOption(props) {
   const dispatch = useDispatch()
   const color = props.color
 
-  const selected = color === state.color
+  const selected = color === state.current.color
   const style = selected ? styles.selected : styles.standard
   return (
     <div>

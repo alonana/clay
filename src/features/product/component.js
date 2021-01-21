@@ -1,15 +1,14 @@
 import React from 'react'
 import styles from './component.module.css'
-import {useSelector} from 'react-redux'
-import {selectState} from '../../app/reducer'
 import {GetShape} from '../shapes/component'
 
 export function Product(props) {
-  const state = useSelector(selectState)
-  const size = state.size
-  const color = state.color
-  const shape = state.shape
-  const radius = `${size * 20}px`
+  const sizeFactor = props.sizeFactor
+  const item = props.item
+  const size = item.size
+  const color = item.color
+  const shape = item.shape
+  const radius = `${size * sizeFactor}px`
   return (
     <div>
       <img
