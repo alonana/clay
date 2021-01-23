@@ -8,7 +8,7 @@ export function ShapeOption(props) {
   const state = useSelector(selectState)
   const dispatch = useDispatch()
   const shape = props.shape
-  const color = state.color
+  const color = state.current.color
   const selected = shape === state.current.shape
   const style = selected ? styles.selected : styles.standard
 

@@ -26,12 +26,12 @@ export function Steps() {
   }
   return (
     <div className={styles.root}>
+      <div className={styles.step}>
+        {step}
+      </div>
       <div className={styles.arrows}>
         <MoveStep offset={1}/>
         <MoveStep offset={-1}/>
-      </div>
-      <div className={styles.step}>
-        {step}
       </div>
     </div>
   )

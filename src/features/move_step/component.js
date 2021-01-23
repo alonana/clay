@@ -1,7 +1,7 @@
 import React from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {selectState, setStep} from '../../app/reducer'
-import styles from './component.module.css'
+import {Button} from '../button/component'
 
 export function MoveStep(props) {
   const state = useSelector(selectState)
@@ -20,25 +20,15 @@ export function MoveStep(props) {
   const newStep = stepId + offset
   const enabled = newStep >= 0 && newStep <= maxStep
 
-  let additionalStyle
-  if (enabled) {
-    additionalStyle = styles.buttonEnabled
-  } else {
-    additionalStyle = styles.buttonDisabled
+  function click() {
+    dispatch(setStep(newStep))
   }
 
   return (
-    <button
-      className={`${styles.button} ${additionalStyle}`}
-      aria-label="Increment value"
-      onClick={() => {
-        if (enabled) {
-          dispatch(setStep(newStep))
-        }
-      }
-      }
-    >
-      {label}
-    </button>
+    <Button
+      disabled={!enabled}
+      onClick={click}
+      value={label}
+    />
   )
 }

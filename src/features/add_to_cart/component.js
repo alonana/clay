@@ -1,19 +1,17 @@
-import styles from './component.module.css'
 import React from 'react'
 import {useDispatch} from 'react-redux'
 import {addToCart} from '../../app/reducer'
+import {Button} from '../button/component'
 
 export function AddToCart(props) {
   const dispatch = useDispatch()
   return (
-    <div
-      className={styles.button}
+    <Button
       onClick={() => {
         dispatch(addToCart())
       }}
-    >
-      הוסף לעגלת הקניות
-    </div>
+      value="הוסף לעגלת הקניות"
+    />
   )
 }
 

@@ -6,8 +6,12 @@ import {Design} from '../design/component'
 export function Master() {
   return (
     <div className={styles.root}>
-      <Cart/>
-      <Design/>
+      <div>
+        <Cart/>
+      </div>
+      <div className={styles.design}>
+        <Design/>
+      </div>
     </div>
   )
 }

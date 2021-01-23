@@ -4,7 +4,9 @@
 }
 
 .arrows {
+    margin-top: 50px;
     margin-bottom: 20px;
+    width: 500px;
 }
 
 .step {
